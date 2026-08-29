@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-29T18:22:17.038952Z",
+  "title": "Design System: Farhan Rangkuti — Personal Site",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "oklch(96.5% 0.007 80.7)",
+        "tonalRamp": [
+          "oklch(15% 0.0029 80.7)",
+          "oklch(26% 0.0035 80.7)",
+          "oklch(38% 0.0041 80.7)",
+          "oklch(49% 0.0046 80.7)",
+          "oklch(61% 0.0052 80.7)",
+          "oklch(72% 0.0058 80.7)",
+          "oklch(84% 0.0064 80.7)",
+          "oklch(95% 0.0069 80.7)"
+        ]
+      },
+      "band": {
+        "role": "neutral",
+        "displayName": "Band",
+        "canonical": "oklch(94.1% 0.012 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.0052 84.6)",
+          "oklch(26% 0.0062 84.6)",
+          "oklch(38% 0.0072 84.6)",
+          "oklch(49% 0.0082 84.6)",
+          "oklch(61% 0.0091 84.6)",
+          "oklch(72% 0.0101 84.6)",
+          "oklch(84% 0.0111 84.6)",
+          "oklch(95% 0.0119 84.6)"
+        ]
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Raised",
+        "canonical": "oklch(91.7% 0.014 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.0063 84.6)",
+          "oklch(26% 0.0075 84.6)",
+          "oklch(38% 0.0086 84.6)",
+          "oklch(49% 0.0098 84.6)",
+          "oklch(61% 0.0109 84.6)",
+          "oklch(72% 0.0120 84.6)",
+          "oklch(84% 0.0132 84.6)",
+          "oklch(95% 0.0137 84.6)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(88.1% 0.016 82.8)",
+        "tonalRamp": [
+          "oklch(15% 0.0076 82.8)",
+          "oklch(26% 0.0090 82.8)",
+          "oklch(38% 0.0103 82.8)",
+          "oklch(49% 0.0116 82.8)",
+          "oklch(61% 0.0129 82.8)",
+          "oklch(72% 0.0142 82.8)",
+          "oklch(84% 0.0155 82.8)",
+          "oklch(95% 0.0152 82.8)"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Hairline, Strong",
+        "canonical": "oklch(81.3% 0.022 83.3)",
+        "tonalRamp": [
+          "oklch(15% 0.0116 83.3)",
+          "oklch(26% 0.0134 83.3)",
+          "oklch(38% 0.0152 83.3)",
+          "oklch(49% 0.0170 83.3)",
+          "oklch(61% 0.0188 83.3)",
+          "oklch(72% 0.0206 83.3)",
+          "oklch(84% 0.0216 83.3)",
+          "oklch(95% 0.0198 83.3)"
+        ]
+      },
+      "fg": {
+        "role": "neutral",
+        "displayName": "Text",
+        "canonical": "oklch(21.9% 0.007 78.2)",
+        "tonalRamp": [
+          "oklch(15% 0.0067 78.2)",
+          "oklch(26% 0.0068 78.2)",
+          "oklch(38% 0.0062 78.2)",
+          "oklch(49% 0.0056 78.2)",
+          "oklch(61% 0.0051 78.2)",
+          "oklch(72% 0.0045 78.2)",
+          "oklch(84% 0.0039 78.2)",
+          "oklch(95% 0.0033 78.2)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Prose",
+        "canonical": "oklch(44.4% 0.012 81.8)",
+        "tonalRamp": [
+          "oklch(15% 0.0095 81.8)",
+          "oklch(26% 0.0105 81.8)",
+          "oklch(38% 0.0114 81.8)",
+          "oklch(49% 0.0116 81.8)",
+          "oklch(61% 0.0106 81.8)",
+          "oklch(72% 0.0096 81.8)",
+          "oklch(84% 0.0086 81.8)",
+          "oklch(95% 0.0077 81.8)"
+        ]
+      },
+      "subtle": {
+        "role": "neutral",
+        "displayName": "Furniture",
+        "canonical": "oklch(49.8% 0.014 79.7)",
+        "tonalRamp": [
+          "oklch(15% 0.0105 79.7)",
+          "oklch(26% 0.0117 79.7)",
+          "oklch(38% 0.0128 79.7)",
+          "oklch(49% 0.0139 79.7)",
+          "oklch(61% 0.0129 79.7)",
+          "oklch(72% 0.0118 79.7)",
+          "oklch(84% 0.0106 79.7)",
+          "oklch(95% 0.0095 79.7)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Deep Rust",
+        "canonical": "oklch(48.6% 0.135 38.6)",
+        "tonalRamp": [
+          "oklch(15% 0.1026 38.6)",
+          "oklch(26% 0.1136 38.6)",
+          "oklch(38% 0.1246 38.6)",
+          "oklch(49% 0.1343 38.6)",
+          "oklch(61% 0.1233 38.6)",
+          "oklch(72% 0.1123 38.6)",
+          "oklch(84% 0.1013 38.6)",
+          "oklch(95% 0.0903 38.6)"
+        ]
+      },
+      "accent-soft": {
+        "role": "primary",
+        "displayName": "Rust Wash",
+        "canonical": "oklch(93.3% 0.019 57.2)",
+        "tonalRamp": [
+          "oklch(15% 0.0084 57.2)",
+          "oklch(26% 0.0099 57.2)",
+          "oklch(38% 0.0115 57.2)",
+          "oklch(49% 0.0130 57.2)",
+          "oklch(61% 0.0146 57.2)",
+          "oklch(72% 0.0161 57.2)",
+          "oklch(84% 0.0177 57.2)",
+          "oklch(95% 0.0188 57.2)"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Warm Near-Black",
+        "canonical": "oklch(18.3% 0.007 78.1)",
+        "tonalRamp": [
+          "oklch(15% 0.0068 78.1)",
+          "oklch(26% 0.0066 78.1)",
+          "oklch(38% 0.0060 78.1)",
+          "oklch(49% 0.0055 78.1)",
+          "oklch(61% 0.0049 78.1)",
+          "oklch(72% 0.0043 78.1)",
+          "oklch(84% 0.0037 78.1)",
+          "oklch(95% 0.0032 78.1)"
+        ]
+      },
+      "dark-band": {
+        "role": "neutral",
+        "displayName": "Band (dark)",
+        "canonical": "oklch(21.9% 0.008 84.6)",
+        "tonalRamp": [
+          "oklch(15% 0.0076 84.6)",
+          "oklch(26% 0.0077 84.6)",
+          "oklch(38% 0.0071 84.6)",
+          "oklch(49% 0.0064 84.6)",
+          "oklch(61% 0.0058 84.6)",
+          "oklch(72% 0.0051 84.6)",
+          "oklch(84% 0.0045 84.6)",
+          "oklch(95% 0.0038 84.6)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Hairline (dark)",
+        "canonical": "oklch(28.7% 0.014 81.7)",
+        "tonalRamp": [
+          "oklch(15% 0.0126 81.7)",
+          "oklch(26% 0.0138 81.7)",
+          "oklch(38% 0.0131 81.7)",
+          "oklch(49% 0.0119 81.7)",
+          "oklch(61% 0.0108 81.7)",
+          "oklch(72% 0.0097 81.7)",
+          "oklch(84% 0.0085 81.7)",
+          "oklch(95% 0.0074 81.7)"
+        ]
+      },
+      "dark-fg": {
+        "role": "neutral",
+        "displayName": "Text (dark)",
+        "canonical": "oklch(94.4% 0.01 81.8)",
+        "tonalRamp": [
+          "oklch(15% 0.0043 81.8)",
+          "oklch(26% 0.0051 81.8)",
+          "oklch(38% 0.0060 81.8)",
+          "oklch(49% 0.0068 81.8)",
+          "oklch(61% 0.0076 81.8)",
+          "oklch(72% 0.0084 81.8)",
+          "oklch(84% 0.0092 81.8)",
+          "oklch(95% 0.0100 81.8)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Prose (dark)",
+        "canonical": "oklch(73.8% 0.018 79.3)",
+        "tonalRamp": [
+          "oklch(15% 0.0104 79.3)",
+          "oklch(26% 0.0119 79.3)",
+          "oklch(38% 0.0134 79.3)",
+          "oklch(49% 0.0148 79.3)",
+          "oklch(61% 0.0163 79.3)",
+          "oklch(72% 0.0178 79.3)",
+          "oklch(84% 0.0167 79.3)",
+          "oklch(95% 0.0153 79.3)"
+        ]
+      },
+      "dark-subtle": {
+        "role": "neutral",
+        "displayName": "Furniture (dark)",
+        "canonical": "oklch(66.4% 0.019 76.0)",
+        "tonalRamp": [
+          "oklch(15% 0.0120 76.0)",
+          "oklch(26% 0.0136 76.0)",
+          "oklch(38% 0.0151 76.0)",
+          "oklch(49% 0.0167 76.0)",
+          "oklch(61% 0.0182 76.0)",
+          "oklch(72% 0.0182 76.0)",
+          "oklch(84% 0.0167 76.0)",
+          "oklch(95% 0.0151 76.0)"
+        ]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "Deep Rust (dark)",
+        "canonical": "oklch(71.4% 0.12 46.8)",
+        "tonalRamp": [
+          "oklch(15% 0.0717 46.8)",
+          "oklch(26% 0.0815 46.8)",
+          "oklch(38% 0.0912 46.8)",
+          "oklch(49% 0.1010 46.8)",
+          "oklch(61% 0.1108 46.8)",
+          "oklch(72% 0.1194 46.8)",
+          "oklch(84% 0.1096 46.8)",
+          "oklch(95% 0.0998 46.8)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page titles, one per page."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Section headings, preceded by their numeral."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose in Petrona at 1.65 leading, held to 66ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Archivo Narrow furniture: field terms, numerals, tags, buttons. Never a sentence."
+      },
+      "data": {
+        "displayName": "Data",
+        "purpose": "Dates, figures and identifiers, tabular."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "enter",
+        "value": "0.6s cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "One authored entrance, on the opening block only."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Hover and state transitions, 200ms."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "480px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "read-column",
+        "value": "768px"
+      },
+      {
+        "name": "wide-column",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Screenshot Frame",
+      "kind": "card",
+      "refersTo": "screenshot-frame",
+      "description": "A real capture of the running product, matted so a dark UI never meets warm paper edge-on.",
+      "html": "<figure class=\"ds-fig\"><div class=\"ds-shot\"><img src=\"/images/quantdesk.png\" alt=\"QuantDesk showing an AAPL analysis across four lenses.\"></div><figcaption class=\"ds-cap\">QuantDesk with an AAPL analysis loaded.</figcaption></figure>",
+      "css": ".ds-fig{margin:0;max-width:520px;font-family:Petrona,Georgia,serif}.ds-shot{overflow:hidden;border:1px solid var(--color-line-strong,#c9c1b2);background:var(--color-band,#efebe3);padding:6px}.ds-shot img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center}.ds-cap{margin-top:10px;font-size:13.5px;color:var(--color-subtle,#67625a)}"
+    },
+    {
+      "name": "Limitation Note",
+      "kind": "card",
+      "refersTo": "note",
+      "description": "A qualification with its own label and accent rule, placed near the claim it qualifies.",
+      "html": "<div class=\"ds-note\"><p class=\"ds-note-l\">Limitation</p><h3 class=\"ds-note-h\">The four lenses are not equally independent</h3><p class=\"ds-note-b\">Flow and Trend are computed from the same price-and-volume series, so they agree more often than four unrelated tests would.</p></div>",
+      "css": ".ds-note{background:var(--color-band,#efebe3);border-left:2px solid var(--color-accent,#9c3d1c);padding:20px 20px 20px 24px;max-width:520px;font-family:Petrona,Georgia,serif}.ds-note-l{margin:0;font-family:'Archivo Narrow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent,#9c3d1c)}.ds-note-h{margin:10px 0 0;font-size:17px;font-weight:500;letter-spacing:-.012em;color:var(--color-fg,#1c1a17)}.ds-note-b{margin:8px 0 0;font-size:16px;line-height:1.6;color:var(--color-muted,#57534c)}"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "A heading preceded by its Roman numeral. The numeral is information: the page states an order.",
+      "html": "<div class=\"ds-sh\"><h2><span class=\"ds-num\">II</span>Analysis &amp; modelling</h2><a class=\"ds-act\" href=\"#\">All analysis</a></div>",
+      "css": ".ds-sh{display:flex;align-items:baseline;justify-content:space-between;gap:24px;font-family:Petrona,Georgia,serif;background:var(--color-paper,#f6f3ee)}.ds-sh h2{display:flex;align-items:baseline;gap:14px;margin:0;font-size:24px;font-weight:500;letter-spacing:-.012em;color:var(--color-fg,#1c1a17)}.ds-num{font-family:'Archivo Narrow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent,#9c3d1c)}.ds-act{font-family:'Archivo Narrow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-subtle,#67625a);text-decoration:none}.ds-act:hover{color:var(--color-accent,#9c3d1c)}"
+    },
+    {
+      "name": "Field List",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Small-caps term, typed value. What makes dense metadata read as printed rather than as grey small text.",
+      "html": "<dl class=\"ds-fl\"><dt>Frontend</dt><dd>Next.js 15 · React 19 · TypeScript</dd><dt>Modelling</dt><dd>scikit-learn · pandas · NumPy</dd></dl>",
+      "css": ".ds-fl{display:grid;grid-template-columns:auto 1fr;gap:8px 20px;margin:0;max-width:420px;background:var(--color-paper,#f6f3ee)}.ds-fl dt{font-family:'Archivo Narrow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-subtle,#67625a);padding-top:3px}.ds-fl dd{margin:0;font-family:'Archivo Narrow',sans-serif;font-size:13px;color:var(--color-muted,#57534c)}"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The lead action. Accent fill, square corners.",
+      "html": "<button class=\"ds-btn\">Get in touch</button>",
+      "css": ".ds-btn{background:var(--color-accent,#9c3d1c);color:var(--color-on-accent,#f6f3ee);font-family:'Archivo Narrow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px;border:none;border-radius:0;cursor:pointer;transition:opacity .2s}.ds-btn:hover{opacity:.9}.ds-btn:focus-visible{outline:2px solid var(--color-accent,#9c3d1c);outline-offset:2px}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Factual, non-interactive, never coloured.",
+      "html": "<span class=\"ds-tag\">PyTorch</span><span class=\"ds-tag\">scikit-learn</span>",
+      "css": ".ds-tag{display:inline-flex;font-family:'Archivo Narrow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-subtle,#67625a);background:var(--color-band,#efebe3);border:1px solid var(--color-line,#ddd7cc);padding:4px 8px;margin-right:6px}"
+    },
+    {
+      "name": "Inline Link",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "The accent's main job in running prose.",
+      "html": "<p class=\"ds-p\">The panel described here is in <a class=\"ds-a\" href=\"#\">QuantDesk</a>, which is live.</p>",
+      "css": ".ds-p{font-family:Petrona,Georgia,serif;font-size:17px;line-height:1.65;color:var(--color-fg,#1c1a17);max-width:66ch;background:var(--color-paper,#f6f3ee)}.ds-a{color:var(--color-accent,#9c3d1c);text-decoration:underline;text-decoration-color:var(--color-line-strong,#c9c1b2);text-underline-offset:.2em;text-decoration-thickness:1px}.ds-a:hover{text-decoration-color:currentColor}"
+    },
+    {
+      "name": "Figure Caption",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "A numbered figure caption: hairline, Fig. n in accent small-caps, then what the image shows.",
+      "html": "<figure class=\"ds-figc\"><div class=\"ds-figbox\"></div><figcaption><span class=\"ds-fign\">Fig. 1</span><span>QuantDesk showing an AAPL analysis: four lenses reporting, with a summary of what they add up to.</span></figcaption></figure>",
+      "css": ".ds-figc{margin:0;max-width:520px;font-family:Petrona,Georgia,serif;background:var(--color-paper,#f6f3ee)}.ds-figbox{height:120px;border:1px solid var(--color-line-strong,#c9c1b2);background:var(--color-band,#efebe3)}.ds-figc figcaption{display:flex;align-items:baseline;gap:10px;margin-top:10px;border-top:1px solid var(--color-line,#ddd7cc);padding-top:10px;font-size:13.5px;line-height:1.45;color:var(--color-subtle,#67625a)}.ds-fign{flex-shrink:0;font-family:'Archivo Narrow',sans-serif;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--color-accent,#9c3d1c)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Conventional structure, with material character",
+    "overview": "A settled middle position arrived at across three builds: a metaphor-led design was rejected as a gimmick, and the plain neutral rebuild that replaced it was rejected as bland and incoherent. The structure is ordinary and sections are named for what they hold; there is no governing metaphor. But the page is not neutral-by-default either — it carries a voice through warm paper, a text serif, small-caps metadata, a specific warm accent, and numbered sections.\n\nThe ground is a functional decision. Two of the three featured products are dark-UI; against stark white their screenshots read as pasted on, and against warm paper with a band-toned mat they sit in the page. That single change is most of what separates this from the version that felt incoherent.",
+    "keyCharacteristics": [
+      "No metaphor, but not voiceless either",
+      "Warm paper ground chosen to serve dark-UI screenshots",
+      "One deep-rust accent, deliberately not terracotta",
+      "Serif for sentences, condensed small-caps for furniture",
+      "Limitations get their own labelled block",
+      "Flat and square — no shadow, no radius",
+      "Printerly detail — grain, masthead rule, numbered figures, a drop cap"
+    ],
+    "rules": [
+      {
+        "name": "The Rust, Not Terracotta Rule",
+        "section": "colors",
+        "body": "The obvious accent for warm paper is terracotta, and it is both the default this palette must avoid and an accessibility failure: #c1553a measures 4.10:1 on this ground, under the floor. The accent is deliberately deeper and browner. Do not lighten it."
+      },
+      {
+        "name": "The Both Grounds Rule",
+        "section": "colors",
+        "body": "Every text value is measured against the ground it actually sits on — paper, band, or the dark equivalents — and both schemes are audited every pass. No theme toggle; the OS already knows."
+      },
+      {
+        "name": "The Furniture Rule",
+        "section": "typography",
+        "body": "Archivo Narrow only labels; it never sets a sentence. If a line has a subject and a verb it is Petrona."
+      },
+      {
+        "name": "The Numeral Rule",
+        "section": "layout",
+        "body": "Major sections carry a Roman numeral in accent small-caps. These are information: each page states an order. Never number a page with a single section."
+      },
+      {
+        "name": "The Real Screenshot Rule",
+        "section": "components",
+        "body": "Every product image is captured from the live application after it has been driven into a real working state. Empty states, mockups and illustrations standing in for the product are not permitted."
+      },
+      {
+        "name": "The Limitation Is Not A Footnote Rule",
+        "section": "components",
+        "body": "A limitation gets its own labelled block near the claim it qualifies, never a parenthetical at the end. This is the one place the accent appears on a non-interactive element, and it is earned."
+      },
+      {
+        "name": "No Metaphor",
+        "section": "overview",
+        "body": "Standing constraint recorded in PRODUCT.md. No conceit, no borrowed vocabulary, no conceptual layer over the content — and none smuggled back as a detail."
+      },
+      {
+        "name": "The Printing Family Rule",
+        "section": "overview",
+        "body": "Detail beyond the strictly necessary — grain, masthead rule, figure numbers, drop cap — is drawn only from the conventions of a well-set printed document. The subject is a published researcher and the site argues for careful evidence, so the ornament is the kind a journal or proof sheet would have. Nothing decorative enters from outside that family."
+      },
+      {
+        "name": "The Figure Rule",
+        "section": "components",
+        "body": "Every screenshot and diagram is a numbered figure with a hairline, Fig. n in accent small-caps, and a description. Numbering is not ornament: it is how a reader refers to an image, and it commits the page to saying what each one shows. An image that cannot earn a caption should not be on the page."
+      },
+      {
+        "name": "The Legibility Rule",
+        "section": "components",
+        "body": "A screenshot is evidence, so its own text must be readable. A capture wider than the reading column breaks out to the wide column rather than being downscaled into it, and a panel is clipped to the part that carries the argument rather than shown whole. A screenshot whose text cannot be read has become decoration."
+      },
+      {
+        "name": "The One Screen Rule",
+        "section": "components",
+        "body": "On an index page a project card must fit a laptop screen together with its detail — title, description, tags, links. That caps the screenshot near 355px tall on desktop (aspect-[8/3], top-cropped; aspect-[16/10] below sm, where a sliver would show nothing). Verified at 1280x800 and 1440x900."
+      },
+      {
+        "name": "The Capture, Not The Crop Rule",
+        "section": "components",
+        "body": "When a top-crop would waste the frame on a sparse header, re-capture the source clipped to the region that carries the argument rather than fudging it with object-position."
+      },
+      {
+        "name": "The Crop Only Downward Rule",
+        "section": "components",
+        "body": "A card frame crops an image only when the image is taller than the frame. A capture already wider than the frame is shown whole: object-cover on a too-wide source scales it up to fill the height and cuts the sides off, which reads as a zoom and hides content."
+      }
+    ],
+    "dos": [
+      "Capture screenshots from the live product, in a real working state, and mat them.",
+      "Measure contrast against the actual ground, in both schemes.",
+      "Give a limitation its own labelled block near the claim it qualifies.",
+      "Set furniture in Archivo Narrow and sentences in Petrona, always.",
+      "Keep prose at 66ch and supporting text in muted.",
+      "Use tabular numerals wherever figures are read down a column.",
+      "Clip a screenshot to the panel that carries the argument, and let it break out of the reading column so its text stays legible.",
+      "Verify a card fits a laptop viewport with its detail, by measuring, not by eye."
+    ],
+    "donts": [
+      "Don't introduce a metaphor, theme, or conceptual frame.",
+      "Don't drift the accent toward terracotta — it is the default here and it fails contrast.",
+      "Don't warm the paper into cream or ivory.",
+      "Don't add shadows, and don't round anything.",
+      "Don't set prose or navigation in the condensed face.",
+      "Don't number a page that has no sequence.",
+      "Don't ship a mockup or empty-state capture where a real screenshot belongs.",
+      "Don't write superlatives.",
+      "Don't add ornament from outside the printing family — no gradients, glows, or illustrative flourishes.",
+      "Don't use box-shadow even to draw a line; borders and pseudo-elements do that job."
+    ]
+  }
+}
