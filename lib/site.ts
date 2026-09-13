@@ -10,7 +10,7 @@ export const site = {
   email: "farhanrangki@gmail.com",
   github: "https://github.com/farhanrkt",
   linkedin: "https://www.linkedin.com/in/farhan-rangkuti",
-  url: "https://farhanrkt.vercel.app",
+  url: "https://farhanrangkuti.vercel.app",
   /** Drop a square photo in public/images/ and set the path here; the page
    *  renders without one until you do. */
   photo: "",

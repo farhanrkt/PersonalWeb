@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Petrona, Archivo_Narrow } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { site } from "@/lib/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -73,6 +74,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        {/* Vercel Web Analytics: cookieless page counts, no cross-site
+            identifiers, nothing personal collected. The only client-side
+            script on the site — inert outside production. */}
+        <Analytics />
       </body>
     </html>
   );
