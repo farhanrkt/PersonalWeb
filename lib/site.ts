@@ -33,9 +33,10 @@ export const intro = [
    quote, and an offline-first language tutor scheduled by a memory model — all
    three deployed, all three still running.`,
   `Day to day I'm a bioinformatics technician on oil palm genomics, building the
-   ETL and the internal tools that carry genotype and phenotype data. My thesis
-   on graph neural networks for music recommendation took Best Paper at ICICyTA
-   2024.`,
+   ETL and the internal tools that carry genotype and phenotype data — including
+   two AI systems that run entirely on our own server, with no external APIs. My
+   thesis on graph neural networks for music recommendation took Best Paper at
+   ICICyTA 2024.`,
   `The habit that runs through all of it is refusing to overstate a result. A
    blank field beats a plausible wrong one; a model that can't speak to a case
    should say so rather than return a number.`,
@@ -49,17 +50,26 @@ export const background = [
     period: "Nov 2025 — present",
     detail: `Large-scale ETL to process, validate and ingest millions of genotype
              and phenotype records for oil palm genomic research. Internal
-             CodeIgniter applications for lab management and phenotypic data
-             visualisation, plus on-premise server operations.`,
+             CodeIgniter modules used across several departments — genotype and
+             phenotype tooling for the biotechnology researchers, and the leave,
+             day-off, design-request and guestbook flows that replaced paper
+             ones. Two self-hosted AI tools with no external APIs: a document
+             Q&A system over n8n, bge-m3 and Qdrant that streams its answers,
+             and a coding assistant that keeps conversation history. I run the
+             on-premise server all of it sits on — deployment, monitoring,
+             troubleshooting — and I'm first-line support for the researchers
+             using it.`,
   },
   {
     role: "Research Assistant",
     org: "Telkom University",
     where: "Bandung",
     period: "Nov 2024 — Feb 2025",
-    detail: `Community detection on SNAP datasets — data exploration and
-             preprocessing, then GraphSAGE, GCN and GAT implemented over
-             PyTorch Geometric, with the training pipelines to compare them.`,
+    detail: `Benchmarked three graph neural network architectures — GraphSAGE,
+             GCN and GAT — for community detection on SNAP datasets.
+             Reproducible training and evaluation pipelines in PyTorch
+             Geometric covering preprocessing, sampling and hyperparameter
+             tuning, then the findings written up and presented.`,
   },
   {
     role: "Teaching Assistant — Discrete Mathematics",
@@ -74,9 +84,12 @@ export const background = [
     org: "Bangkit Academy — Google, GoTo, Traveloka",
     where: "Remote",
     period: "Aug 2023 — Jan 2024",
-    detail: `Around 250 hours of instructor-led training. Capstone was Healthify,
-             a nutrition recommendation system framed as a knapsack-like
-             optimisation over a USDA food dataset.`,
+    detail: `Selected for the 2023 cohort: 250 hours of instructor-led training,
+             and the TensorFlow Developer Certificate earned during it. The
+             capstone was Healthify, a healthy-food recommender that treats diet
+             adjustment as a knapsack-like problem — I built the recommendation
+             model, from preprocessing through cross-validation and
+             hyperparameter tuning.`,
   },
 ] as const;
 
@@ -89,17 +102,33 @@ export const education = {
            Recommendation Systems`,
 } as const;
 
-/** Ten, all with credential IDs. Shown compactly — never as ten cards. */
-export const certifications = [
+export type Certification = {
+  name: string;
+  issuer: string;
+  year?: string;
+  /** Public verification URL. Present only where the credential is actually
+   *  checkable — the page links these and says nothing about the rest, rather
+   *  than claiming every entry can be verified. */
+  credential?: string;
+};
+
+/** Shown compactly — never as nine cards. */
+export const certifications: Certification[] = [
   { name: "Machine Learning Specialization", issuer: "Stanford University", year: "2023" },
-  { name: "TensorFlow Developer Certificate", issuer: "TensorFlow Certificate Program", year: "2024" },
+  {
+    name: "TensorFlow Developer Certificate",
+    issuer: "TensorFlow Certificate Program",
+    year: "2024",
+    credential: "https://www.credential.net/6f4a2e6b-ba35-4822-8d47-e1b539000b18",
+  },
   { name: "DeepLearning.AI TensorFlow Developer Specialization", issuer: "DeepLearning.AI", year: "2023" },
   { name: "TensorFlow: Data and Deployment Specialization", issuer: "DeepLearning.AI", year: "2023" },
   { name: "Mathematics for Machine Learning and Data Science", issuer: "DeepLearning.AI", year: "2023" },
   { name: "Structuring Machine Learning Projects", issuer: "DeepLearning.AI", year: "2023" },
+  { name: "Google Data Analytics", issuer: "Google — Coursera" },
   { name: "EF SET English Certificate — 79/100, C2 Proficient", issuer: "EF SET", year: "2023" },
   { name: "Programming fundamentals, logic, and Git", issuer: "Dicoding Indonesia", year: "2024" },
-] as const;
+];
 
 export const capabilities = [
   {
@@ -129,7 +158,20 @@ export const capabilities = [
     items: ["Python", "SQL", "PostgreSQL", "Large-scale ETL", "Supabase", "Tableau"],
   },
   {
+    label: "Retrieval & self-hosting",
+    items: ["Qdrant", "bge-m3 embeddings", "n8n", "On-premise deployment"],
+  },
+  {
     label: "Shipping",
-    items: ["Next.js", "React", "FastAPI", "TypeScript", "Vercel", "Cloudflare Workers"],
+    items: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "FastAPI",
+      "PHP / CodeIgniter",
+      "C++",
+      "Vercel",
+      "Cloudflare Workers",
+    ],
   },
 ] as const;

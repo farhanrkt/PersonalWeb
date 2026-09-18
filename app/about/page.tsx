@@ -14,7 +14,7 @@ export default function AboutPage() {
     <Container wide>
       <PageTitle
         title="About"
-        intro="Where I've worked and what I've been trained in. Every certification below carries a credential identifier, because one nobody can check is a claim rather than a credential."
+        intro="Where I've worked and what I've been trained in. Where a certification can be verified publicly, it links to the issuer's record — the ones that can't are listed plainly rather than dressed up as checkable."
       />
 
       {site.photo && (
@@ -61,7 +61,8 @@ export default function AboutPage() {
             </p>
             <p className="measure mt-3 text-[15.5px] leading-relaxed text-muted">
               Final project: <span className="italic">{education.thesis}</span> — presented at
-              ICICyTA 2024, awarded Best Paper, and published on IEEE Xplore.
+              ICICyTA 2024, awarded Best Paper (1st) and Best Presenter (8th), and published on
+              IEEE Xplore.
             </p>
           </div>
         </div>
@@ -71,15 +72,23 @@ export default function AboutPage() {
         <h2 className="mb-6 text-xl font-medium tracking-tight">
           Certifications{" "}
           <span className="data text-[13px] font-normal text-subtle">
-            {certifications.length} with credential IDs
+            {certifications.length} total
           </span>
         </h2>
         <ul className="grid gap-x-10 gap-y-4 sm:grid-cols-2">
           {certifications.map((c) => (
             <li key={c.name} className="text-[15.5px] leading-snug">
-              {c.name}
+              {c.credential ? (
+                <ExternalLink href={c.credential} className="hover:text-accent">
+                  {c.name}
+                </ExternalLink>
+              ) : (
+                c.name
+              )}
               <span className="data mt-0.5 block text-[12px] text-subtle">
-                {c.issuer} · {c.year}
+                {c.issuer}
+                {c.year ? ` · ${c.year}` : ""}
+                {c.credential ? " · verifiable" : ""}
               </span>
             </li>
           ))}
