@@ -125,7 +125,7 @@ export const certifications: Certification[] = [
   { name: "TensorFlow: Data and Deployment Specialization", issuer: "DeepLearning.AI", year: "2023" },
   { name: "Mathematics for Machine Learning and Data Science", issuer: "DeepLearning.AI", year: "2023" },
   { name: "Structuring Machine Learning Projects", issuer: "DeepLearning.AI", year: "2023" },
-  { name: "Google Data Analytics", issuer: "Google — Coursera" },
+  { name: "Google Data Analytics", issuer: "Google — Coursera", year: "2023" },
   { name: "EF SET English Certificate — 79/100, C2 Proficient", issuer: "EF SET", year: "2023" },
   { name: "Programming fundamentals, logic, and Git", issuer: "Dicoding Indonesia", year: "2024" },
 ];
