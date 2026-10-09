@@ -101,7 +101,7 @@ Three things a neighboring portfolio could not truthfully copy:
     the conservative collapse was kept, because a κ near zero cannot tell an
     independent-and-informative lens from an independent-and-noisy one.
 - **Three confirmed live deployments:** QuantDesk
-  (`quantdesk-v1.vercel.app`), ScholarTrack (`scholartracker-v1.vercel.app`),
+  (`quantdesk.rangkalabs.cloud`), ScholarTrack (`scholartrack.rangkalabs.cloud`),
   LinguaKu (`linguaku.farhanrangki.workers.dev`). All three verified reachable.
 - **Publication:** ICICyTA 2024, IEEE Xplore document `10912908`.
 - **No availability or job-seeking language anywhere on the site.** The user is
