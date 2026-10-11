@@ -180,7 +180,7 @@ export default function ResearchPage() {
               className="mt-8 border-t border-line pt-6"
               rows={[
                 { term: "Venue", value: "ICICyTA 2024" },
-                { term: "Publisher", value: "IEEE, pp. 297–301" },
+                { term: "Publisher", value: "IEEE, pp. 296–301" },
                 { term: "Indexed", value: "Scopus · IEEE Xplore" },
                 { term: "Awards", value: "Best Paper (1st), Best Presenter (8th)" },
                 { term: "Data", value: "Spotify Million Playlist Dataset" },

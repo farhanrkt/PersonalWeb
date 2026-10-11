@@ -189,7 +189,7 @@ Three things a neighboring portfolio could not truthfully copy:
 - **Publication — the full paper is in hand** (read 2026-08-25). *Comparative
   Evaluation of Graph Neural Network Algorithms for Music Recommendation
   Systems*, Farhan Rangkuti and Fitriyani, School of Computing, Telkom
-  University. ICICyTA 2024, IEEE pp. 297–301, **Scopus-indexed**, IEEE Xplore
+  University. ICICyTA 2024, IEEE pp. 296–301, **Scopus-indexed**, IEEE Xplore
   `10912908`. Best Paper (1st), Best Presenter (8th).
   - **It compares exactly two architectures: GraphSAGE and GCN.** Not three.
     GAT is named in the paper's introduction only as an example of GNN variants.

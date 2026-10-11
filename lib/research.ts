@@ -4,7 +4,7 @@ export const research = {
   authors: "Farhan Rangkuti, Fitriyani",
   affiliation: "School of Computing, Telkom University, Bandung",
   venue:
-    "2024 International Conference on Intelligent Cybernetics Technology & Applications (ICICyTA), IEEE, pp. 297–301",
+    "2024 International Conference on Intelligent Cybernetics Technology & Applications (ICICyTA), IEEE, pp. 296–301",
   indexed: "Scopus-indexed · IEEE Xplore",
   doi: "https://ieeexplore.ieee.org/document/10912908",
   repo: "https://github.com/farhanrkt/Published-Final-Project-GNN-Music-Recommender",
