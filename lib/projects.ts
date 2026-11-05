@@ -1,17 +1,38 @@
 export type Metric = { value: string; label: string; note?: string };
-export type Block = { title: string; body: string[] };
 
+/** A figure set inside a case-study section. Real captures only. */
+export type Figure = {
+  src: string;
+  w: number;
+  h: number;
+  shape: "wide" | "phone";
+  /** Doubles as the caption, so it must describe what is on screen. */
+  alt: string;
+};
+export type Block = { title: string; body: string[]; figure?: Figure };
+
+/**
+ * rangkalabs.cloud is the source of truth for every project's status, links
+ * and one-line description. This site may say less, never something different.
+ */
 export type Project = {
   slug: string;
   name: string;
   tagline: string;
+  /** RangkaLabs' own one-line description (`desc` on rangkalabs.cloud/lab),
+   *  copied word for word. Used on the cards and as the meta description. */
   blurb: string;
+  /** The case study's opening paragraph — longer than the card line. */
+  lead: string;
   year: string;
   role: string;
+  /** RangkaLabs' label, exactly: Idea, Experiment, Beta or Live. */
   status: string;
   domain: string;
   liveUrl?: string;
   repoUrl: string;
+  /** A lab note about this project on rangkalabs.cloud. */
+  writeUp?: string;
   /** A real screenshot of the running application, captured from the live URL. */
   image: string;
   shape: "wide" | "phone";
@@ -21,6 +42,8 @@ export type Project = {
   /** True pixel dimensions, so nothing guesses an aspect ratio. */
   imageW: number;
   imageH: number;
+  /** A capture clipped for the index card, where `image` would crop badly. */
+  card?: { src: string; w: number; h: number; alt: string };
   /** An optional second capture, shown on the case study only. */
   image2?: string;
   shape2?: "wide" | "phone";
@@ -43,20 +66,33 @@ export const projects: Project[] = [
     name: "QuantDesk",
     tagline: "Four independent models read the same stock, side by side.",
     blurb:
-      "A quantitative equity research desk that runs four models reading four different datasets — order flow, price trend, intrinsic value and accounting quality — then reports where they agree, where they contradict each other, and what none of them can see. Covers US and Indonesian (IDX) listings.",
+      "Reads a stock through four independent lenses (flow, trend, value and quality) and writes a plain-language verdict instead of a single score.",
+    lead:
+      "A quantitative equity research desk that runs four models reading four different datasets — order flow, price trend, intrinsic value and accounting quality — then reports where they agree, where they contradict each other, and what none of them can see. Covers US and Indonesian (IDX) listings. An analysis tool, not investment advice.",
     year: "2026",
     role: "Sole engineer — modelling, API, interface",
-    status: "Live",
+    status: "Beta",
     domain: "Quantitative finance",
     liveUrl: "https://quantdesk.rangkalabs.cloud",
     repoUrl: "https://github.com/farhanrkt/QuantDesk",
-    image: "/images/quantdesk-nvda.png",
+    writeUp: "https://rangkalabs.cloud/notes/why-quantdesks-ranking-doesnt-predict-returns/",
+    // Captured from quantdesk.rangkalabs.cloud/stock/AAPL on 2026-11-05 at 2x,
+    // clipped to the verdict panel. The card uses the top of the same capture.
+    image: "/images/quantdesk-aapl.png",
     shape: "wide",
     shotAlt:
-      "QuantDesk reading NVDA, verdict \u201cMixed signals\u201d: Flow says Buying and Trend says Uptrend, while Value reports the price 82% above the cash-flow model and Quality flags 4 of 9 health checks passed. A line beneath notes that Flow and Trend both read price and volume while Value and Quality both read the filings \u2014 so the count is of data sources, not panels.",
-    shotShort: "NVDA \u2014 the price lenses and the filings lenses disagree.",
-    imageW: 2480,
-    imageH: 826,
+      "QuantDesk's page for AAPL on 5 November 2026, verdict \u201cMixed signals\u201d: Flow reads Buying and Trend an Uptrend, while Value puts the price 67% above the cash-flow model's $114.82 and Quality passes 8 of 9 health checks. A line between them notes that Flow and Trend both read price and volume while Value and Quality both read the filings \u2014 so the count is of data sources, not panels.",
+    shotShort: "AAPL \u2014 the price lenses read up; Value reads the price as above its model range.",
+    imageW: 2048,
+    imageH: 1022,
+    card: {
+      src: "/images/quantdesk-aapl-verdict.png",
+      w: 2048,
+      h: 620,
+      alt: "QuantDesk's page for AAPL, verdict \u201cMixed signals\u201d: Flow Buying, Trend Uptrend, Value Above model range, Quality Neutral \u2014 with the note that Flow and Trend both read price and volume and Value and Quality both read the filings, so the count is of data sources, not panels.",
+    },
+    // Captured from the live app on 2026-08-30. Re-checked 2026-11-05: the
+    // panel still shows this table, measured 2026-08-29.
     image2: "/images/quantdesk-overlap.png",
     shape2: "wide",
     image2W: 2392,
@@ -157,6 +193,40 @@ export const projects: Project[] = [
         ],
       },
       {
+        title: "A page per company, compare, and what moved the markets",
+        body: [
+          `New in November. Every company has its own page, so a refresh, a
+           bookmark and a shared link all land on the same reading. Compare
+           lines up two to four companies through the same lenses, row by row,
+           and never decides between them: the columns stay in the order you
+           put them, nothing is computed across columns, and the build fails if
+           a compare file sorts, sums or takes a maximum.`,
+          `What moved the markets is a board of 22 instruments — indices,
+           yields, currencies, commodities and bitcoin — with each day's move
+           set against that instrument's own daily moves over the past year.
+           Nothing is red or green, because crude falling helps an airline and
+           hurts a coal miner. A move larger than 95% of its own days is marked
+           unusual, and the board says how often that happens: on about 40% of
+           weekdays, something among twenty instruments moves that much.`,
+          `Beside it, a calendar of the dates that move markets — FOMC
+           decisions, CPI, the jobs report, Bank Indonesia's rate decisions,
+           exchange holidays and the next report for the company on screen —
+           with how often past event days moved more than a median day. None of
+           the nine event-and-market pairs measured is outside what chance
+           produces, and the panel says so, as history rather than a forecast.`,
+        ],
+        // Cropped from the QuantDesk capture published on rangkalabs.cloud
+        // (assets/stock-app.webp, 1600x1000, November 2026): the markets column
+        // only, so its text stays legible at the figure's width.
+        figure: {
+          src: "/images/quantdesk-markets.png",
+          w: 350,
+          h: 940,
+          shape: "phone",
+          alt: "The markets panel that sits beside every company page, here beside NVDA: whether NYSE and IDX are open, eight price tiles with three-month sparklines — the S&P 500 and the Nasdaq marked unusual against their own past year — and the November 2026 calendar with the jobs report, CPI, NVIDIA's report and Bank Indonesia's decision written into their days. Cropped from the capture published on RangkaLabs.",
+        },
+      },
+      {
         title: "Scan, rank, and the honesty of a composite",
         body: [
           `The breadth half of the workflow batch-downloads up to 250 symbols in
@@ -169,8 +239,8 @@ export const projects: Project[] = [
            participation ratio of that matrix — how many genuinely independent
            signals the composite is really averaging. On a real Dow scan,
            momentum and trend correlate at +0.98 and seven columns carry about
-           3.2 signals' worth of independent information. That number is printed
-           in the panel header rather than buried.`,
+           3.4 signals' worth of information. That number is printed in the
+           panel header rather than buried.`,
         ],
       },
       {
@@ -220,10 +290,11 @@ export const projects: Project[] = [
         body: [
           `Flow and Trend — the pair deliberately collapsed into a single vote
            because they read the same price-and-volume series — came out at
-           κ = +0.07, on an interval running from −0.02 to +0.17 that straddles
-           zero. From the other end, the participation ratio says the four
-           lenses carry 3.72 lenses' worth of independent information, not the
-           two they are counted as.`,
+           κ = +0.07 on the panel's 121 names, on an interval running from
+           −0.02 to +0.17 that straddles zero, and at +0.03 across all 168. From
+           the other end, the participation ratio says the four lenses carry
+           3.7 lenses' worth of independent information, not the two they are
+           counted as.`,
           `The grouping was left alone anyway, and that is the part worth
            keeping. A kappa near zero cannot distinguish a reading that carries
            separate information from one that is mostly noise — both are
@@ -269,6 +340,18 @@ export const projects: Project[] = [
       },
     ],
     limits: [
+      {
+        title: "The ranking does not predict returns",
+        body: [
+          `The scan's composite sorts an index, and an ordered list reads like a
+           forecast. Backtested over six years on four index universes at three
+           holding periods, nothing survived correcting for the 24 tests run,
+           and the most sensitive test could only have seen an edge about two
+           and a half times the bar set for a useful one. The panel says so
+           beneath the ranking. It is still a way to shortlist names for the
+           slower lenses; it is not a forecast.`,
+        ],
+      },
       {
         title: "The independence claim is measured, but narrowly",
         body: [
@@ -322,10 +405,12 @@ export const projects: Project[] = [
     name: "ScholarTrack",
     tagline: "A crawler that is only allowed to record what it can quote.",
     blurb:
+      "Reads scholarship funders’ websites with an LLM and keeps a value only if its supporting quote appears word-for-word on the page.",
+    lead:
       "A zero-cost dashboard for finding, filtering and tracking fully-funded international scholarships. Programme details live in structured JSONB columns rather than prose, so questions a wall of text cannot answer become filters — and every extracted value is verified against a verbatim quote from the funder's own page before it is allowed into the database.",
     year: "2026",
     role: "Sole engineer — schema, pipeline, interface",
-    status: "Live",
+    status: "Experiment",
     domain: "Data extraction & trust",
     liveUrl: "https://scholartrack.rangkalabs.cloud",
     repoUrl: "https://github.com/farhanrkt/ScholarshipTracker",
@@ -524,10 +609,12 @@ export const projects: Project[] = [
     name: "LinguaKu",
     tagline: "Offline-first language learning, with no account and no dark patterns.",
     blurb:
+      "An offline-first PWA that teaches English and Japanese to Indonesian speakers — no account, no paywall, no ads, and no engagement dark patterns.",
+    lead:
       "A PWA that teaches English and Japanese to Indonesian speakers — no account, no paywall, no ads, no engagement mechanics, and zero recurring cost. A learner on a cheap Android phone taps the icon and is answering a useful question in 108 ms, fully offline, because a memory model predicts they are about to forget it.",
     year: "2026",
     role: "Sole engineer — spec, data pipeline, app",
-    status: "Live · v1.11.1",
+    status: "Live",
     domain: "Learning science & performance",
     liveUrl: "https://linguaku.farhanrangki.workers.dev",
     repoUrl: "https://github.com/farhanrkt/LinguaKu",
@@ -554,8 +641,8 @@ export const projects: Project[] = [
     ],
     metrics: [
       { value: "108 ms", label: "icon tap → first question", note: "against a 3 s budget" },
-      { value: "138 KB", label: "initial JS, gzipped", note: "budget 200 KB · CSS 6.7 KB of 40" },
-      { value: "822", label: "tests", note: "766 unit · 56 end-to-end" },
+      { value: "144.1 KB", label: "initial JS, gzipped", note: "budget 200 KB · CSS 6.8 KB of 40" },
+      { value: "955", label: "unit tests", note: "plus 79 end-to-end" },
       { value: "0", label: "WCAG 2.1 AA violations", note: "gated in CI, in both themes" },
     ],
     problem: [

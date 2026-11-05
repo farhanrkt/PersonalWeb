@@ -24,21 +24,47 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   };
 }
 
-function Blocks({ blocks }: { blocks: Block[] }) {
+/** `figStart` is the number the first figure inside these blocks takes. */
+function Blocks({ blocks, figStart = 1 }: { blocks: Block[]; figStart?: number }) {
+  let fig = figStart;
   return (
     <div className="space-y-8">
-      {blocks.map((b) => (
-        <div key={b.title}>
-          <h3 className="text-[17px] font-medium tracking-tight">{b.title}</h3>
-          <div className="mt-2.5 space-y-3.5">
-            {b.body.map((p, i) => (
-              <p key={i} className="measure text-[16.5px] leading-[1.7] text-muted">
-                {p}
-              </p>
-            ))}
+      {blocks.map((b) => {
+        const n = b.figure ? fig++ : 0;
+        return (
+          <div key={b.title}>
+            <h3 className="text-[17px] font-medium tracking-tight">{b.title}</h3>
+            <div className="mt-2.5 space-y-3.5">
+              {b.body.map((p, i) => (
+                <p key={i} className="measure text-[16.5px] leading-[1.7] text-muted">
+                  {p}
+                </p>
+              ))}
+            </div>
+            {b.figure && (
+              <figure className="mt-7">
+                <div
+                  className={`shot ${b.figure.shape === "phone" ? "mx-auto max-w-[330px]" : ""}`}
+                >
+                  <Image
+                    src={b.figure.src}
+                    alt={b.figure.alt}
+                    width={b.figure.w}
+                    height={b.figure.h}
+                    sizes={
+                      b.figure.shape === "phone" ? "330px" : "(max-width: 1024px) 100vw, 720px"
+                    }
+                  />
+                </div>
+                <figcaption className="mt-2.5 flex items-baseline gap-2.5 border-t border-line pt-2.5 text-[13.5px] leading-snug text-subtle">
+                  <span className="label shrink-0 text-accent">Fig. {n}</span>
+                  <span>{b.figure.alt}</span>
+                </figcaption>
+              </figure>
+            )}
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -63,12 +89,17 @@ export default async function CaseStudy({ params }: Params) {
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[15px]">
           {project.liveUrl && (
             <ExternalLink href={project.liveUrl} className="text-accent hover:opacity-80">
-              Live site
+              Open app
             </ExternalLink>
           )}
           <ExternalLink href={project.repoUrl} className="text-muted hover:text-fg">
             Source
           </ExternalLink>
+          {project.writeUp && (
+            <ExternalLink href={project.writeUp} className="text-muted hover:text-fg">
+              Write-up
+            </ExternalLink>
+          )}
         </div>
       </div>
 
@@ -87,7 +118,7 @@ export default async function CaseStudy({ params }: Params) {
         <span>{project.shotAlt}</span>
       </p>
 
-      <p className="measure mt-10 text-[18px] leading-relaxed">{project.blurb}</p>
+      <p className="measure mt-10 text-[18px] leading-relaxed">{project.lead}</p>
 
       <div className="mt-8 flex flex-wrap gap-1.5">
         {project.chips.map((c) => (
@@ -141,7 +172,7 @@ export default async function CaseStudy({ params }: Params) {
                 <span>How the pieces fit together.</span>
               </figcaption>
             </figure>
-            <Blocks blocks={project.sections} />
+            <Blocks blocks={project.sections} figStart={project.image2 ? 4 : 3} />
           </section>
 
           <section>

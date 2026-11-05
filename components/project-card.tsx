@@ -21,10 +21,16 @@ export function ProjectCard({
   figure?: number;
 }) {
   const phone = project.shape === "phone";
+  const shot = project.card ?? {
+    src: project.image,
+    w: project.imageW,
+    h: project.imageH,
+    alt: project.shotAlt,
+  };
   // Crop only images that are TALLER than the frame. A capture already wider
   // than 8:3 needs no crop — cropping one scales it up and cuts the sides off,
   // which reads as a zoom rather than a crop.
-  const needsCrop = project.imageW / project.imageH < 8 / 3;
+  const needsCrop = shot.w / shot.h < 8 / 3;
 
   return (
     <article className="group">
@@ -39,10 +45,10 @@ export function ProjectCard({
           }`}
         >
           <Image
-            src={project.image}
-            alt={project.shotAlt}
-            width={project.imageW}
-            height={project.imageH}
+            src={shot.src}
+            alt={shot.alt}
+            width={shot.w}
+            height={shot.h}
             priority={priority}
             sizes={phone ? "180px" : "(max-width: 1024px) 100vw, 1024px"}
             className={
@@ -93,12 +99,17 @@ export function ProjectCard({
           </Link>
           {project.liveUrl && (
             <ExternalLink href={project.liveUrl} className="text-muted hover:text-fg">
-              Live site
+              Open app
             </ExternalLink>
           )}
           <ExternalLink href={project.repoUrl} className="text-muted hover:text-fg">
             Source
           </ExternalLink>
+          {project.writeUp && (
+            <ExternalLink href={project.writeUp} className="text-muted hover:text-fg">
+              Write-up
+            </ExternalLink>
+          )}
         </div>
       </div>
     </article>
