@@ -32,7 +32,8 @@ export function LabList({ heading = "h3" }: { heading?: "h3" | "h4" }) {
                   Write-up
                 </ExternalLink>
               )}
-              <span className="data text-[12px] text-subtle">{p.access}</span>
+              {/* A sentence ("it only answers me"), so Petrona, not the label face. */}
+              <span className="text-[14px] text-subtle">{p.access}</span>
             </div>
           </div>
         </li>

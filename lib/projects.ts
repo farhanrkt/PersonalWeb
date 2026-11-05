@@ -347,7 +347,7 @@ export const projects: Project[] = [
            forecast. Backtested over six years on four index universes at three
            holding periods, nothing survived correcting for the 24 tests run,
            and the most sensitive test could only have seen an edge about two
-           and a half times the bar set for a useful one. The panel says so
+           and a half times the bar I set for a useful one. The panel says so
            beneath the ranking. It is still a way to shortlist names for the
            slower lenses; it is not a forecast.`,
         ],
