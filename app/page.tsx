@@ -4,15 +4,13 @@ import { site, intro, proof } from "@/lib/site";
 import { projects } from "@/lib/projects";
 import { analyses } from "@/lib/analysis";
 import { research } from "@/lib/research";
-import { pieces } from "@/lib/writing";
+import { labNotes } from "@/lib/writing";
 import { Container, SectionHeading, ExternalLink } from "@/components/ui";
 import { ProjectCard } from "@/components/project-card";
 import { LabList } from "@/components/lab-list";
 import { lab, labIntro } from "@/lib/lab";
 
 export default function Home() {
-  const latest = pieces[0];
-
   return (
     <Container wide>
       {/* ── intro ────────────────────────────────────────────────────────── */}
@@ -132,22 +130,27 @@ export default function Home() {
       </section>
 
       {/* ── writing ──────────────────────────────────────────────────────── */}
-      {latest && (
+      {labNotes.length > 0 && (
         <section className="border-t border-line py-14 sm:py-16">
           <SectionHeading numeral="III" href="/writing" action="All writing">
             Writing
           </SectionHeading>
-          <h3 className="measure text-lg leading-snug font-medium tracking-tight">
-            <Link href={`/writing/${latest.slug}`} className="-my-1 inline-block py-1 hover:text-accent">
-              {latest.title}
-            </Link>
-          </h3>
-          <p className="data mt-2 text-[12.5px] text-subtle">
-            {latest.date} · {latest.subject}
+          <p className="measure mb-6 text-[15.5px] leading-relaxed text-muted">
+            Lab notes — what worked, what didn&rsquo;t, and why — published on RangkaLabs.
           </p>
-          <p className="measure mt-3 text-[15.5px] leading-relaxed text-muted">
-            {latest.standfirst}
-          </p>
+          <ul className="divide-y divide-line border-y border-line">
+            {labNotes.map((n) => (
+              <li key={n.url}>
+                <ExternalLink
+                  href={n.url}
+                  className="flex w-full flex-wrap items-baseline gap-x-3 gap-y-0.5 py-3.5 text-[15.5px] hover:text-accent"
+                >
+                  <span className="font-medium">{n.title}</span>
+                  <span className="data ml-auto text-[12px] text-subtle">{n.date}</span>
+                </ExternalLink>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 

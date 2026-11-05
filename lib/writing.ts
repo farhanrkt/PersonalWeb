@@ -1,6 +1,45 @@
 export type Aside = { title: string; body: string };
 export type Section = { heading?: string; body: string[]; aside?: Aside };
 
+/**
+ * A lab note published on rangkalabs.cloud. Linked, never copied: the note
+ * lives there and this site points at it.
+ */
+export type LabNote = {
+  title: string;
+  /** As displayed. */
+  date: string;
+  /** For sorting and <time>. */
+  iso: string;
+  subject: string;
+  url: string;
+};
+
+/** Newest first. Titles and dates exactly as published on rangkalabs.cloud/notes. */
+export const labNotes: LabNote[] = [
+  {
+    title: "Hermes: a personal AI agent on a 2 GB VPS, running on free models",
+    date: "23 October 2026",
+    iso: "2026-10-23",
+    subject: "AI agents · self-hosting",
+    url: "https://rangkalabs.cloud/notes/hermes-a-personal-ai-agent-on-a-2-gb-vps/",
+  },
+  {
+    title: "idx-newsflow: what I built and what I measured",
+    date: "15 October 2026",
+    iso: "2026-10-15",
+    subject: "Data engineering · evaluation",
+    url: "https://rangkalabs.cloud/notes/idx-newsflow-what-i-built-and-what-i-measured/",
+  },
+  {
+    title: "Why QuantDesk's ranking doesn't predict returns",
+    date: "11 October 2026",
+    iso: "2026-10-11",
+    subject: "Backtest · negative result",
+    url: "https://rangkalabs.cloud/notes/why-quantdesks-ranking-doesnt-predict-returns/",
+  },
+];
+
 export type Piece = {
   slug: string;
   title: string;
@@ -10,6 +49,8 @@ export type Piece = {
   subject: string;
   sections: Section[];
   figure?: { src: string; alt: string; caption: string };
+  /** A newer version of the same piece, published as a lab note. */
+  supersededBy?: LabNote;
 };
 
 export const pieces: Piece[] = [
@@ -21,6 +62,7 @@ export const pieces: Piece[] = [
     date: "August 2026",
     year: "2026",
     subject: "Backtesting · multiple comparisons",
+    supersededBy: labNotes[2],
     figure: {
       src: "/images/quantdesk-backtest.png",
       alt: "The panel in QuantDesk headed \u201cDoes this ranking predict anything?\u201d \u2014 rank-versus-return correlations at three holding periods with corrected p-values, a smallest-detectable-effect column, and the caveats listed beneath.",
@@ -66,8 +108,8 @@ export const pieces: Piece[] = [
            twenty-four survives a Benjamini–Hochberg correction.`,
           `The panel also reports what the test could have detected. With 71
            non-overlapping periods, the most sensitive horizon could only have
-           found a mean information coefficient of about 0.08; a genuinely
-           useful one in this field is nearer 0.03. That distinction matters
+           found a mean information coefficient of about 0.08, against the 0.03
+           I take as the bar for a useful one. That distinction matters
            more than the p-values: this is "no edge large enough to see here",
            not "no edge".`,
         ],

@@ -37,6 +37,21 @@ export default async function Article({ params }: Params) {
         <p className="measure mt-6 border-b border-line pb-8 text-[19px] leading-relaxed text-muted">
           {piece.standfirst}
         </p>
+        {piece.supersededBy && (
+          <div className="measure mt-8">
+            <Note label="Update" title="A newer version of this note is on RangkaLabs">
+              This is the August version. The current one, with all twelve results and what changed
+              in the app since, is{" "}
+              <a
+                href={piece.supersededBy.url}
+                className="text-accent underline decoration-line-strong hover:decoration-current"
+              >
+                {piece.supersededBy.title}
+              </a>
+              , published {piece.supersededBy.date}.
+            </Note>
+          </div>
+        )}
       </Container>
 
       {/* The figure breaks out of the reading column so its detail stays legible. */}
@@ -99,7 +114,7 @@ export default async function Article({ params }: Params) {
           >
             QuantDesk
           </Link>
-          , which is live and whose source is public.
+          , which is in beta and whose source is public.
         </p>
       </Container>
     </>
