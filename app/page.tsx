@@ -7,6 +7,8 @@ import { research } from "@/lib/research";
 import { pieces } from "@/lib/writing";
 import { Container, SectionHeading, ExternalLink } from "@/components/ui";
 import { ProjectCard } from "@/components/project-card";
+import { LabList } from "@/components/lab-list";
+import { lab } from "@/lib/lab";
 
 export default function Home() {
   const latest = pieces[0];
@@ -60,6 +62,21 @@ export default function Home() {
           {projects.map((p, i) => (
             <ProjectCard key={p.slug} project={p} priority={i === 0} figure={i + 1} />
           ))}
+        </div>
+
+        <div className="mt-16">
+          <h3 className="text-lg font-medium tracking-tight">Also at RangkaLabs</h3>
+          <p className="measure mt-2 mb-6 text-[15.5px] leading-relaxed text-muted">
+            Projects without a case study here, each with the status the{" "}
+            <a
+              href={lab.page}
+              className="text-accent underline decoration-line-strong hover:decoration-current"
+            >
+              lab page
+            </a>{" "}
+            gives it.
+          </p>
+          <LabList heading="h4" />
         </div>
       </section>
 

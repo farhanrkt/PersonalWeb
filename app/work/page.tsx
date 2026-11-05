@@ -4,11 +4,13 @@ import { analyses } from "@/lib/analysis";
 import { excluded } from "@/lib/excluded";
 import { Container, PageTitle, SectionHeading, ExternalLink } from "@/components/ui";
 import { ProjectCard } from "@/components/project-card";
+import { LabList } from "@/components/lab-list";
+import { lab } from "@/lib/lab";
 
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Three applications running in production, a list of modelling and analysis work, and what this page leaves out.",
+    "Three deployed applications, the smaller projects alongside them at RangkaLabs, a list of modelling and analysis work, and what this page leaves out.",
 };
 
 export default function WorkPage() {
@@ -16,7 +18,7 @@ export default function WorkPage() {
     <Container wide>
       <PageTitle
         title="Work"
-        intro="Three applications taken from model to deployment and still running, the modelling work that lives as notebooks, and — so the selection is legible — what this page leaves out and why."
+        intro="Three applications taken from model to deployment and still running, the smaller projects alongside them at RangkaLabs, the modelling work that lives as notebooks, and — so the selection is legible — what this page leaves out and why."
       />
 
       <section className="border-t border-line py-14">
@@ -28,8 +30,24 @@ export default function WorkPage() {
         </div>
       </section>
 
+      <section id="lab" className="scroll-mt-8 border-t border-line py-14">
+        <SectionHeading numeral="II">Also at RangkaLabs</SectionHeading>
+        <p className="measure mb-8 text-[16px] leading-relaxed text-muted">
+          Projects without a case study on this page — an agent with no public repository, a
+          pipeline whose code is private, and an idea — each with the status the{" "}
+          <a
+            href={lab.page}
+            className="text-accent underline decoration-line-strong hover:decoration-current"
+          >
+            RangkaLabs lab page
+          </a>{" "}
+          gives it. Where there is no code to read, the write-up is the evidence.
+        </p>
+        <LabList />
+      </section>
+
       <section id="analysis" className="scroll-mt-8 border-t border-line py-14">
-        <SectionHeading numeral="II">Analysis &amp; modelling</SectionHeading>
+        <SectionHeading numeral="III">Analysis &amp; modelling</SectionHeading>
         <p className="measure mb-8 text-[16px] leading-relaxed text-muted">
           Work held as notebooks rather than products. Listed with its method and data, which is
           what makes an analysis judgeable without opening it.
@@ -56,7 +74,7 @@ export default function WorkPage() {
       </section>
 
       <section className="border-t border-line py-14">
-        <SectionHeading numeral="III">Not shown here</SectionHeading>
+        <SectionHeading numeral="IV">Not shown here</SectionHeading>
         <p className="measure mb-8 text-[16px] leading-relaxed text-muted">
           A list of only the good things tells you nothing about how it was selected, so these are
           named rather than quietly omitted.
