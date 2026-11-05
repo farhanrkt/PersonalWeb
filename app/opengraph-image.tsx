@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { site } from "@/lib/site";
+import { site, proof } from "@/lib/site";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -34,9 +34,7 @@ export default function OpengraphImage() {
 
         <div style={{ display: "flex", alignItems: "center", gap: 20, borderTop: "1px solid #e4e4e7", paddingTop: 26 }}>
           <div style={{ display: "flex", width: 10, height: 10, borderRadius: 9999, background: "#9c3d1c" }} />
-          <div style={{ display: "flex", fontSize: 22, color: "#57534c" }}>
-            Three applications in production
-          </div>
+          <div style={{ display: "flex", fontSize: 22, color: "#57534c" }}>{proof[0]}</div>
           <div style={{ display: "flex", fontSize: 22, color: "#c9c1b2" }}>/</div>
           <div style={{ display: "flex", fontSize: 22, color: "#57534c" }}>
             Best Paper, ICICyTA 2024

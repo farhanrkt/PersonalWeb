@@ -18,7 +18,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: `${site.name} — ${site.role}`, template: `%s — ${site.name}` },
   description: site.tagline,
-  keywords: ["data scientist", "machine learning", "graph neural networks", "bioinformatics", site.name],
+  keywords: [
+    "data scientist",
+    "machine learning",
+    "graph neural networks",
+    "bioinformatics",
+    "RangkaLabs",
+    site.name,
+  ],
   authors: [{ name: site.name, url: site.github }],
   creator: site.name,
   openGraph: {
