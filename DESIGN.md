@@ -300,11 +300,27 @@ Small-caps term, `data`-set value, two columns. Used for stack, role, dates and
 credential metadata. This is what makes dense information read as printed rather
 than as grey small text.
 
+### Lab list
+
+The smaller RangkaLabs projects — those without a public repository or with
+nothing built yet — are a typeset index, not cards: name, the lab's status
+on a live dot, its category in `data`, the one-line description in `muted`,
+the lab's note in `subtle` italic, then a "Write-up" link and how the code
+stands. Two columns from `lg` (`13rem` and the rest), one below. **The No
+Empty Frame Rule:** a project with no real screenshot never gets a card, because
+a card is a frame for a screenshot and an empty one is decoration.
+
+A case-study section may carry its own figure (a capture that belongs to that
+section's argument). It is numbered after the page's earlier figures, and a
+phone-shaped crop keeps the 330px column.
+
 ### Tags, buttons, navigation
 
 Tags: small-caps, band fill, hairline border, never interactive, never coloured.
 Buttons: accent fill with `on-accent` text, or hairline-bordered for secondary.
 Navigation: name left, four links right, hairline base, all links at all widths.
+External homes — RangkaLabs, GitHub, LinkedIn — live in the hero's link row
+and the footer, never as a fifth nav link.
 
 ### Diagrams
 

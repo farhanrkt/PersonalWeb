@@ -76,6 +76,19 @@ Three things a neighboring portfolio could not truthfully copy:
      Stochastic-DCF-DDM, Whatsapp-chat-analyzer, and
      Self-Correcting-Multi-Agent-Syndicate. These must not be featured and must
      not have READMEs written to make them look finished.
+- **RangkaLabs is the source of truth for projects (since 2026-11-05).** The
+  user founded RangkaLabs (`rangkalabs.cloud`), an independent AI lab in
+  Bogor, and its lab page labels every project Idea, Experiment, Beta or
+  Live. This site may say less, never something different: the same labels,
+  the same links, the lab's one-line descriptions word for word, no claim the
+  lab page doesn't make, and no figure that isn't on the lab page or in the
+  project's own repository. The two filters above still govern **case
+  studies**. A lab project that fails the public filter, or has nothing built
+  yet, appears only in the typeset "Also at RangkaLabs" list with its label and
+  a link to its write-up — never as a case study, never with a code link to a
+  private repository. As of 2026-11-05 that is Hermes (Live; no public repo,
+  "it only answers me"), idx-newsflow (Experiment; private repo) and the RAG
+  evaluation dashboard (Idea, next on the roadmap).
 - **Vercel deploys these projects from their working branch, not `main`.**
   Recorded 2026-08-30 after getting this wrong: `main` being behind is not
   evidence that anything is undeployed, and the only reliable check is to probe
@@ -96,13 +109,17 @@ Three things a neighboring portfolio could not truthfully copy:
     script to re-run. **Live figure: κ = +0.05 across 121 names** (Dow Jones
     Industrial Average and Nasdaq-100); across all four universes, 168
     deduplicated names, it is +0.03. The claim survived. Flow · Trend came out
-    at +0.07 on an interval straddling zero, and the participation ratio says
-    the four lenses carry 3.72 lenses' worth of independent information — but
+    at +0.07 on the panel's 121 names, on an interval straddling zero, and at
+    +0.03 across all 168; the participation ratio says the four lenses carry
+    3.7 lenses' worth of independent information (QuantDesk README) — but
     the conservative collapse was kept, because a κ near zero cannot tell an
     independent-and-informative lens from an independent-and-noisy one.
-- **Three confirmed live deployments:** QuantDesk
+- **Three deployments at public URLs:** QuantDesk
   (`quantdesk.rangkalabs.cloud`), ScholarTrack (`scholartrack.rangkalabs.cloud`),
-  LinguaKu (`linguaku.farhanrangki.workers.dev`). All three verified reachable.
+  LinguaKu (`linguaku.farhanrangki.workers.dev`). All three verified reachable
+  on 2026-11-05. RangkaLabs labels them **Beta, Experiment and Live**
+  respectively; the site uses those labels and never calls them "in
+  production".
 - **Publication:** ICICyTA 2024, IEEE Xplore document `10912908`.
 - **No availability or job-seeking language anywhere on the site.** The user is
   currently employed; the contact section stays warm but announces nothing.
@@ -113,9 +130,11 @@ Three things a neighboring portfolio could not truthfully copy:
 
 ### Open — do not invent
 
-- **Writing/notes has no content yet.** The section is committed but unwritten.
-  Until at least one real piece exists it must not ship as an empty shell
-  implying a cadence that does not exist.
+- **Writing — resolved.** New writing is published as lab notes on
+  RangkaLabs, and the Writing section links them rather than copying them:
+  QuantDesk's ranking (11 Oct 2026), idx-newsflow (15 Oct 2026) and Hermes
+  (23 Oct 2026). The site's own essay "The ranking predicts nothing" (August
+  2026) stays up, marked as the earlier version of the 11 October note.
 - **LinkedIn side activities and competitions are not yet captured.** The user
   states these exist and are absent from the CV. No LinkedIn extract has been
   read — the Chrome extension is not connected and the profile is behind an auth
@@ -134,14 +153,19 @@ Three things a neighboring portfolio could not truthfully copy:
 - **Telkom research assistantship dates — resolved to Nov 2024 – Feb 2025.**
   Two independent sources (the CV and the predecessor site) agree; only LinkedIn
   says Apr 2025, and it is the outdated record. Worth correcting on LinkedIn.
-- **CV PDF is not yet placed in the project.** The latest export lives in the
-  user's Downloads folder and has not been copied in or given a stable path.
+- **CV PDF — placed.** Served from `public/farhan-rangkuti-cv.pdf`, phone
+  number removed. Still open, and the user's to change in the export: it says
+  "Actively seeking opportunities…", which conflicts with the no-job-seeking
+  rule above; it does not mention RangkaLabs or the projects; and it gives
+  Bangkit's location as Bandung where the site says Remote.
 
 ## Brand Commitments
 
 - **Name:** Farhan Rangkuti. **GitHub:** `farhanrkt`.
   **LinkedIn:** `linkedin.com/in/farhan-rangkuti`.
   **Email:** `farhanrangki@gmail.com`.
+  **Lab:** RangkaLabs, `rangkalabs.cloud` — linked from the hero, the About
+  page and the footer; not a fifth nav item.
 - **Voice — binding, and evidenced by his own writing.** Precise, measured,
   understated. States what a thing cannot do in the same breath as what it can.
   Prefers a measured number to an adjective. Never uses "passionate",
@@ -245,8 +269,8 @@ Three things a neighboring portfolio could not truthfully copy:
 - **Languages** — native Indonesian, proficient English (see EF SET above).
 
 **Absences that must not be fabricated:** no testimonials, no employer
-endorsements, no user or traffic numbers, no published writing yet, and no
-awards beyond ICICyTA.
+endorsements, no user or traffic numbers, no published writing beyond the
+lab notes and the August essay, and no awards beyond ICICyTA.
 
 **There are no competitions.** Confirmed by the user on 2026-08-24 after every
 source was checked. This is a settled fact, not a gap awaiting research: never

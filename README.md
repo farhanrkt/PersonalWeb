@@ -3,10 +3,18 @@
 Personal professional site for Farhan Rangkuti — data scientist. Case studies for
 [QuantDesk](https://github.com/farhanrkt/QuantDesk),
 [ScholarTrack](https://github.com/farhanrkt/ScholarshipTracker) and
-[LinguaKu](https://github.com/farhanrkt/LinguaKu), plus the ICICyTA 2024 paper,
-an analysis index, and writing.
+[LinguaKu](https://github.com/farhanrkt/LinguaKu), the smaller projects from
+[RangkaLabs](https://rangkalabs.cloud), the ICICyTA 2024 paper, an analysis
+index, and writing.
 
 Live at **https://farhanrangkuti.vercel.app**.
+
+**[rangkalabs.cloud](https://rangkalabs.cloud/lab/) is the source of truth for
+every project.** This site may say less, never something different: the same
+status labels (Idea, Experiment, Beta, Live), the same links, RangkaLabs' own
+one-line descriptions word for word, no claim the lab page doesn't make, and
+no figure that isn't in the lab page or the project's own repository. Last
+synced 2026-11-05.
 
 ## Stack
 
@@ -44,9 +52,10 @@ Everything readable lives in `lib/` — no JSX edits needed for routine changes.
 | File               | Holds                                                                 |
 | ------------------ | --------------------------------------------------------------------- |
 | `lib/site.ts`      | Name, role, contact, canonical URL, photo path, intro, proof lines, background, education, certifications, capabilities |
-| `lib/projects.ts`  | One object per project: metrics, problem, how-it-works sections, decisions, limitations, screenshots |
+| `lib/projects.ts`  | One object per case study: RangkaLabs status and one-liner, metrics, problem, how-it-works sections, decisions, limitations, screenshots |
+| `lib/lab.ts`       | RangkaLabs' URL, the hero's sentence about it, and the smaller lab projects without a case study (Hermes, idx-newsflow, the RAG dashboard) |
 | `lib/research.ts`  | The ICICyTA 2024 paper — abstract, method, results table, findings    |
-| `lib/writing.ts`   | Essays; one object per piece                                          |
+| `lib/writing.ts`   | The RangkaLabs lab notes the site links to, and its own essays        |
 | `lib/analysis.ts`  | The notebook index — modelling work that isn't a deployed product     |
 | `lib/excluded.ts`  | What the site does not show, and why it was left out                  |
 
@@ -62,6 +71,15 @@ slug; a project without a matching key renders no diagram.
 from the live deployments — never mockups, stock photography or invented charts.
 Each project's `imageW`/`imageH` must match the file's true pixel dimensions, or
 the card crop misbehaves.
+
+| File | Source |
+| ---- | ------ |
+| `quantdesk-aapl.png`, `quantdesk-aapl-verdict.png` | quantdesk.rangkalabs.cloud/stock/AAPL, 2026-11-05, 2x; the card file is the top of the same capture |
+| `quantdesk-markets.png` | Cropped from RangkaLabs' `assets/stock-app.webp` (November 2026): the markets column only |
+| `quantdesk-overlap.png`, `quantdesk-backtest.png` | The live QuantDesk app; in this repo since 2026-08-30. The overlap table was re-checked unchanged on 2026-11-05 |
+| `scholartrack.png` | The live ScholarTrack app; in this repo since 2026-08-30. Still 43 programmes on 2026-11-05 |
+| `linguaku-progress.png`, `linguaku-session.png` | The live LinguaKu app; in this repo since 2026-08-30 |
+| `gnn-system-design.png` | The ICICyTA 2024 paper |
 
 > Next's image optimiser caches by filename. Replacing an image in place serves
 > the stale optimisation even after clearing `.next/cache/images`. Give a
