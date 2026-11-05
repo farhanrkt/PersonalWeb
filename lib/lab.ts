@@ -13,6 +13,13 @@ export const lab = {
   page: "https://rangkalabs.cloud/lab/",
 } as const;
 
+/** Closes the hero's first paragraph, set around a link to the lab. */
+export const labIntro = {
+  before: "I build them at ",
+  after:
+    ", an independent AI lab in Bogor that I founded, where every project is labelled with exactly where it stands today.",
+} as const;
+
 export type LabProject = {
   name: string;
   /** RangkaLabs' label, exactly: Idea, Experiment, Beta or Live. */

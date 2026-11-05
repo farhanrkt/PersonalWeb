@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { lab } from "@/lib/lab";
 import { Container, ExternalLink } from "./ui";
 
 export function SiteFooter() {
@@ -20,6 +21,9 @@ export function SiteFooter() {
             <Link href="/writing" className="-my-1 py-1 text-muted hover:text-fg">
               Writing
             </Link>
+            <ExternalLink href={lab.url} className="text-muted hover:text-fg">
+              {lab.name}
+            </ExternalLink>
             <ExternalLink href={site.github} className="text-muted hover:text-fg">
               GitHub
             </ExternalLink>

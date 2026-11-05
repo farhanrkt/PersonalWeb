@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { site, background, education, certifications, capabilities } from "@/lib/site";
+import { lab } from "@/lib/lab";
 import { Container, PageTitle, ExternalLink } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -16,6 +18,24 @@ export default function AboutPage() {
         title="About"
         intro="Where I've worked and what I've been trained in. Where a certification can be verified publicly, it links to the issuer's record — the ones that can't are listed plainly rather than dressed up as checkable."
       />
+
+      <p className="measure -mt-4 pb-10 text-[17px] leading-relaxed text-muted">
+        Outside the day job I run{" "}
+        <a
+          href={lab.url}
+          className="text-accent underline decoration-line-strong hover:decoration-current"
+        >
+          {lab.name}
+        </a>
+        , the independent AI lab in Bogor that I founded. The applications on the{" "}
+        <Link
+          href="/work"
+          className="text-accent underline decoration-line-strong hover:decoration-current"
+        >
+          Work
+        </Link>{" "}
+        page are its projects.
+      </p>
 
       {site.photo && (
         <div className="pb-10">

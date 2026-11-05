@@ -22,7 +22,7 @@ export const site = {
  * row would turn checkable facts into the hero-metric template.
  */
 export const proof = [
-  "Three models running in production",
+  "Three apps deployed at public URLs",
   "Best Paper at ICICyTA 2024, indexed in Scopus",
   "Graph neural networks, anomaly detection, valuation",
 ] as const;

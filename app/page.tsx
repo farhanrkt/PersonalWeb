@@ -8,7 +8,7 @@ import { pieces } from "@/lib/writing";
 import { Container, SectionHeading, ExternalLink } from "@/components/ui";
 import { ProjectCard } from "@/components/project-card";
 import { LabList } from "@/components/lab-list";
-import { lab } from "@/lib/lab";
+import { lab, labIntro } from "@/lib/lab";
 
 export default function Home() {
   const latest = pieces[0];
@@ -24,7 +24,22 @@ export default function Home() {
 
         <div className="measure mt-8 space-y-4 text-[17px] leading-relaxed text-muted">
           {intro.map((p, i) => (
-            <p key={i}>{p}</p>
+            <p key={i}>
+              {p}
+              {i === 0 && (
+                <>
+                  {" "}
+                  {labIntro.before}
+                  <a
+                    href={lab.url}
+                    className="text-accent underline decoration-line-strong hover:decoration-current"
+                  >
+                    {lab.name}
+                  </a>
+                  {labIntro.after}
+                </>
+              )}
+            </p>
           ))}
         </div>
 
@@ -41,6 +56,9 @@ export default function Home() {
           >
             Get in touch
           </a>
+          <ExternalLink href={lab.url} className="text-muted hover:text-fg">
+            {lab.name}
+          </ExternalLink>
           <ExternalLink href={site.github} className="text-muted hover:text-fg">
             GitHub
           </ExternalLink>
